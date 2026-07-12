@@ -1,0 +1,20 @@
+﻿{
+  "schema_version": "0.2",
+  "run_id": "example-quickread-001",
+  "created_at": "2026-07-12T03:00:00Z",
+  "source": {"title": "Annual Tooling Landscape", "path_or_url": "https://example.com/tooling-landscape.pdf", "source_type": "report", "sensitivity": "public"},
+  "triage_decision": "quick_read_now",
+  "basis": "The long report is broad, but its current summary and one category section can determine whether deeper research is justified.",
+  "input_coverage": "sampled_sections",
+  "inspected_sections": ["executive_summary", "table_of_contents", "relevant_category_section"],
+  "fit_target": "current tool-selection decision",
+  "expected_deep_read_cost": "high",
+  "expected_decision_impact": "medium",
+  "expected_attention_saved": "high",
+  "confidence": "medium",
+  "uncertainty": "Company claims and category evidence were not verified.",
+  "not_inferred": "The report is not treated as a complete market map or a recommendation.",
+  "revisit_trigger": "A procurement or implementation decision requires evidence beyond the quick screen.",
+  "recommended_next_gate": "Spend 10-15 minutes on the executive summary, conclusion, and the most relevant category; then decide whether to request deep analysis.",
+  "writeback_status": "none"
+}

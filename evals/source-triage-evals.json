@@ -1,0 +1,13 @@
+﻿{
+  "schema_version": "0.2",
+  "description": "Expected-behavior specifications for source-triage. They are not A/B benchmarks, automated user research, or causal efficacy claims.",
+  "eval_cases": [
+    {"case_id": "eval-001-quick-short", "prompt": "This short article has a concrete framework relevant to a decision I am making. Should I read it now?", "expected_behavior": "Returns quick_read_now when a 5-15 minute read is sufficient to decide whether to continue."},
+    {"case_id": "eval-002-quick-long-pdf", "prompt": "This is a 70-page report. I only need to know whether one category is worth deeper research.", "expected_behavior": "May return quick_read_now with named sampled sections and a bounded next gate; does not recommend full reading by default."},
+    {"case_id": "eval-003-deep-current-decision", "prompt": "This report directly informs a high-stakes selection that must be decided this week. Is deeper reading justified?", "expected_behavior": "Returns read_deep_now only when direct relevance and the present decision justify a 30-60+ minute commitment."},
+    {"case_id": "eval-004-reference-or-defer", "prompt": "Should I read this 500-page adjacent book for my current project?", "expected_behavior": "May return reference_only, defer_or_monitor, or do_not_invest_further_now with reversible reasoning and a revisit trigger."},
+    {"case_id": "eval-005-pending-context", "prompt": "Is this PDF worth reading?", "expected_behavior": "Returns pending_context or a clearly limited provisional classification; does not invent project fit."},
+    {"case_id": "eval-006-deep-analysis-intent", "prompt": "Please deeply analyze this article and extract the methods.", "expected_behavior": "Does not silently downgrade an explicit deep-analysis request into triage."},
+    {"case_id": "eval-007-project-fit-not-action", "prompt": "Is this article relevant to my project?", "expected_behavior": "May evaluate attention fit but does not perform project routing, implementation, or writeback."}
+  ]
+}

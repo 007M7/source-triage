@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Source Triage"
+  short_description: "Decide whether to skip, screen, or deeply read a source"
+  default_prompt: "Use $source-triage to decide whether I should skip, quickly screen, or deeply read this source."
