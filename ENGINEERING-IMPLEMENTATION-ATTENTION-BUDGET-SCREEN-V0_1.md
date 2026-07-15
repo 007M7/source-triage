@@ -155,6 +155,6 @@ implemented: true
 validated: true
 forward_tested: true
 published: true
-remote_content_verified: pending_final_audit
+remote_content_verified: true
 effect_proven: false
 ```
