@@ -133,23 +133,31 @@ git clone https://github.com/007M7/source-triage.git .claude/skills/source-triag
 3. 注意力约束：只想花 10 分钟，还是愿意投入一小时深读。
 ```
 
-## 一个刻意保留的未来方向
+## 推荐统一工作流
 
-Source Triage 是一个最小但完整的入口：**先决定注意力，再由用户决定是否继续。**
+Source Triage 的注意力决策能力现在可以与 Slop 内容风险筛查合并使用。推荐的新主入口是：
 
-如果用户还关心内容本身是否存在低信息量或批量生产风险，可以使用已经独立发布的邻接 Skill：
+[Attention Budget Screen](https://github.com/007M7/attention-budget-screen)
 
-[Content Signal Screen](https://github.com/007M7/content-signal-screen)
-
-它用四个信号检查：具体收获、来源具体性、作者痕迹和认知推进。它不是 AI 检测器、事实核验器，也不会把内容风险自动转换成“现在不值得读”。
+它把两个问题放进一个工作流：
 
 ```text
-当前 Skill：决定注意力
-邻接 Skill：检查内容质量风险
-未来可选流程：用户明确要求后，再从来源中学习
+先识别 Slop / 信息污染风险
+          ↓
+再做原始注意力预算决策
+          ↓
+跳过 / 延后 / 参考 / 快读 / 深读 / 先核验
 ```
 
-两个 Skill 目前保持独立接入。Source Triage 仍然只负责“先决定要不要分配注意力”；Content Signal Screen 只提供内容质量风险提示。它们都不是自动研究、自动行动或自动写入任何系统的承诺。即使不接任何后续流程，今天这个“先决定要不要读”的入口也应当独立有用。
+它不是 AI 检测器、事实核验器，也不会把内容风险自动转换成“现在不值得读”。
+
+```text
+推荐主入口：Attention Budget Screen
+兼容旧入口：Source Triage
+旧的独立内容筛查：Content Signal Screen
+```
+
+当前仓库仍保留原有 Source Triage 契约和接入方式，适合只做注意力决策的用户。需要完整工作流时，直接安装 Attention Budget Screen。三个项目都不承诺自动研究、自动行动或自动写入任何系统。
 
 ## 隐私与反馈
 
